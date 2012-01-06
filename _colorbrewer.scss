@@ -1,0 +1,1061 @@
+//////////////////////////////
+// Color Brewer Function
+//  @name: Namespace of color set you want to use
+//  @number: Number of steps you want.
+//////////////////////////////
+
+@function cbrew($name, $number) {
+  // Initialize color
+  $color: '';
+  
+  //////////////////////////////
+  // Qualitative Colors
+  //////////////////////////////
+  // Accent namespace
+  @if $name == 'accent' or $name == 'Accent' {
+    $accent: rgb(127, 201, 127) rgb(190, 174, 212) rgb(253, 192, 134) rgb(244, 244, 153) rgb(56, 108, 176) rgb(240, 2, 127) rgb(191, 91, 23) rgb(102, 102, 102);
+    @if $number >= 3 and $number <= 8 {
+      @for $i from 1 through $number {
+        @if $i == 1 {
+          $color: nth($accent, $i);
+        }
+        @else {
+          $color: join($color, nth($accent, $i));
+        }
+      }
+    }
+    @else {
+      @if $number < 3 {
+        @warn 'You must have at lease 3 colors';
+      }
+      @else {
+        @warn $number 'has a maximum of 8 colors';
+      }
+      @return ERROR;
+    }
+  }
+  
+  // Dark 2
+  @if $name == 'dark2' or $name == 'Dark2' or $name == 'dark 2' or $name == 'Dark 2'{
+    
+  }
+  
+  // Paired
+  @if $name == 'paired' or $name == 'Paired' {
+    
+  }
+  
+  // Pastel 1
+  @if $name == 'pastel1' or $name == 'Pastel1' or $name == 'pastel 1' or $name == 'Pastel 1' {
+    
+  }
+  
+  // Pastel 2
+  @if $name == 'pastel2' or $name == 'Pastel2' or $name == 'pastel 2' or $name == 'Pastel 2' {
+    
+  }
+  
+  // Set 1
+  @if $name== 'set1' or $name == 'Set1' or $name == 'set 1' or $name == 'Set 1' {
+    
+  }
+  
+  // Set 2
+  @if $name== 'set2' or $name == 'Set2' or $name == 'set 2' or $name == 'Set 2' {
+    
+  }
+  
+  // Set 3
+  @if $name== 'set3' or $name == 'Set3' or $name == 'set 3' or $name == 'Set 3' {
+    
+  }
+  
+  //////////////////////////////
+  // Sequential Colors
+  //////////////////////////////
+  // Blues
+  @else if $name == 'blues' or $name == 'Blues' {
+    @if $number == 3 {
+      
+    }
+    @else if $number == 4 {
+      
+    }
+    @else if $number == 5 {
+      
+    }
+    @else if $number == 6 {
+      
+    }
+    @else if $number == 7 {
+      
+    }
+    @else if $number == 8 {
+      
+    }
+    @else if $number == 9 {
+      
+    }
+    @else {
+      @if $number < 3 {
+        @warn 'You must have at lease 3 colors';
+      }
+      @else {
+        @warn $number 'has a maximum of 9 colors';
+      }
+      @return ERROR;
+    }
+  }
+  
+  // BrBG
+  @else if $name == 'brbg' or $name == 'BrBG' or $name == 'BrBg' {
+    @if $number == 3 {
+      
+    }
+    @else if $number == 4 {
+      
+    }
+    @else if $number == 5 {
+      
+    }
+    @else if $number == 6 {
+      
+    }
+    @else if $number == 7 {
+      
+    }
+    @else if $number == 8 {
+      
+    }
+    @else if $number == 9 {
+      
+    }
+    @else if $number == 10 {
+      
+    }
+    @else if $number == 11 {
+      
+    }
+    @else {
+      @if $number < 3 {
+        @warn 'You must have at lease 3 colors';
+      }
+      @else {
+        @warn $number 'has a maximum of 11 colors';
+      }
+      @return ERROR;
+    }
+  }
+  
+  // BuGn
+  @else if $name == 'bugn' or $name == 'BuGn' {
+    @if $number == 3 {
+      
+    }
+    @else if $number == 4 {
+      
+    }
+    @else if $number == 5 {
+      
+    }
+    @else if $number == 6 {
+      
+    }
+    @else if $number == 7 {
+      
+    }
+    @else if $number == 8 {
+      
+    }
+    @else if $number == 9 {
+      
+    }
+    @else {
+      @if $number < 3 {
+        @warn 'You must have at lease 3 colors';
+      }
+      @else {
+        @warn $number 'has a maximum of 9 colors';
+      }
+      @return ERROR;
+    }
+  }
+  
+  // BuPu
+  @else if $name == 'bupu' or $name == 'BuPu' {
+    @if $number == 3 {
+      
+    }
+    @else if $number == 4 {
+      
+    }
+    @else if $number == 5 {
+      
+    }
+    @else if $number == 6 {
+      
+    }
+    @else if $number == 7 {
+      
+    }
+    @else if $number == 8 {
+      
+    }
+    @else if $number == 9 {
+      
+    }
+    @else {
+      @if $number < 3 {
+        @warn 'You must have at lease 3 colors';
+      }
+      @else {
+        @warn $number 'has a maximum of 9 colors';
+      }
+      @return ERROR;
+    }
+  }
+  
+  // GnBu
+  @else if $name == 'gnbu' or $name == 'GnBu' {
+    @if $number == 3 {
+      
+    }
+    @else if $number == 4 {
+      
+    }
+    @else if $number == 5 {
+      
+    }
+    @else if $number == 6 {
+      
+    }
+    @else if $number == 7 {
+      
+    }
+    @else if $number == 8 {
+      
+    }
+    @else if $number == 9 {
+      
+    }
+    @else {
+      @if $number < 3 {
+        @warn 'You must have at lease 3 colors';
+      }
+      @else {
+        @warn $number 'has a maximum of 9 colors';
+      }
+      @return ERROR;
+    }
+  }
+  
+  // Greens
+  @else if $name == 'greens' or $name == 'Greens' {
+    @if $number == 3 {
+      
+    }
+    @else if $number == 4 {
+      
+    }
+    @else if $number == 5 {
+      
+    }
+    @else if $number == 6 {
+      
+    }
+    @else if $number == 7 {
+      
+    }
+    @else if $number == 8 {
+      
+    }
+    @else if $number == 9 {
+      
+    }
+    @else {
+      @if $number < 3 {
+        @warn 'You must have at lease 3 colors';
+      }
+      @else {
+        @warn $number 'has a maximum of 9 colors';
+      }
+      @return ERROR;
+    }
+  }
+  
+  // Greys
+  @else if $name == 'greys' or $name == 'Greys' {
+    @if $number == 3 {
+      
+    }
+    @else if $number == 4 {
+      
+    }
+    @else if $number == 5 {
+      
+    }
+    @else if $number == 6 {
+      
+    }
+    @else if $number == 7 {
+      
+    }
+    @else if $number == 8 {
+      
+    }
+    @else if $number == 9 {
+      
+    }
+    @else {
+      @if $number < 3 {
+        @warn 'You must have at lease 3 colors';
+      }
+      @else {
+        @warn $number 'has a maximum of 9 colors';
+      }
+      @return ERROR;
+    }
+  }
+  
+  // Oranges
+  @else if $name == 'oranges' or $name == 'Oranges' {
+    @if $number == 3 {
+      
+    }
+    @else if $number == 4 {
+      
+    }
+    @else if $number == 5 {
+      
+    }
+    @else if $number == 6 {
+      
+    }
+    @else if $number == 7 {
+      
+    }
+    @else if $number == 8 {
+      
+    }
+    @else if $number == 9 {
+      
+    }
+    @else {
+      @if $number < 3 {
+        @warn 'You must have at lease 3 colors';
+      }
+      @else {
+        @warn $number 'has a maximum of 9 colors';
+      }
+      @return ERROR;
+    }
+  }
+  
+  // OrRd
+  @else if $name == 'orrd' or $name == 'OrRd' {
+    @if $number == 3 {
+      
+    }
+    @else if $number == 4 {
+      
+    }
+    @else if $number == 5 {
+      
+    }
+    @else if $number == 6 {
+      
+    }
+    @else if $number == 7 {
+      
+    }
+    @else if $number == 8 {
+      
+    }
+    @else if $number == 9 {
+      
+    }
+    @else {
+      @if $number < 3 {
+        @warn 'You must have at lease 3 colors';
+      }
+      @else {
+        @warn $number 'has a maximum of 9 colors';
+      }
+      @return ERROR;
+    }
+  }
+  
+  // PuBu
+  @else if $name == 'pubu' or $name == 'PuBu'{
+    @if $number == 3 {
+      
+    }
+    @else if $number == 4 {
+      
+    }
+    @else if $number == 5 {
+      
+    }
+    @else if $number == 6 {
+      
+    }
+    @else if $number == 7 {
+      
+    }
+    @else if $number == 8 {
+      
+    }
+    @else if $number == 9 {
+      
+    }
+    @else {
+      @if $number < 3 {
+        @warn 'You must have at lease 3 colors';
+      }
+      @else {
+        @warn $number 'has a maximum of 9 colors';
+      }
+      @return ERROR;
+    }
+  }
+  
+  
+  // PuBuGn
+  @else if $name == 'pubugn' or $name == 'PuBuGn' {
+    @if $number == 3 {
+      
+    }
+    @else if $number == 4 {
+      
+    }
+    @else if $number == 5 {
+      
+    }
+    @else if $number == 6 {
+      
+    }
+    @else if $number == 7 {
+      
+    }
+    @else if $number == 8 {
+      
+    }
+    @else if $number == 9 {
+      
+    }
+    @else {
+      @if $number < 3 {
+        @warn 'You must have at lease 3 colors';
+      }
+      @else {
+        @warn $number 'has a maximum of 9 colors';
+      }
+      @return ERROR;
+    }
+  }
+  
+  // PuRd
+  @else if $name == 'purd' or $name == 'PuRd' {
+    @if $number == 3 {
+      
+    }
+    @else if $number == 4 {
+      
+    }
+    @else if $number == 5 {
+      
+    }
+    @else if $number == 6 {
+      
+    }
+    @else if $number == 7 {
+      
+    }
+    @else if $number == 8 {
+      
+    }
+    @else if $number == 9 {
+      
+    }
+    @else {
+      @if $number < 3 {
+        @warn 'You must have at lease 3 colors';
+      }
+      @else {
+        @warn $number 'has a maximum of 9 colors';
+      }
+      @return ERROR;
+    }
+  }
+  
+  // Purples
+  @else if $name == 'purples' or $name == 'Purples' {
+    @if $number == 3 {
+      
+    }
+    @else if $number == 4 {
+      
+    }
+    @else if $number == 5 {
+      
+    }
+    @else if $number == 6 {
+      
+    }
+    @else if $number == 7 {
+      
+    }
+    @else if $number == 8 {
+      
+    }
+    @else if $number == 9 {
+      
+    }
+    @else {
+      @if $number < 3 {
+        @warn 'You must have at lease 3 colors';
+      }
+      @else {
+        @warn $number 'has a maximum of 9 colors';
+      }
+      @return ERROR;
+    }
+  }
+  
+  // Reds
+  @else if $name == 'reds' or $name == 'reds' {
+    @if $number == 3 {
+      
+    }
+    @else if $number == 4 {
+      
+    }
+    @else if $number == 5 {
+      
+    }
+    @else if $number == 6 {
+      
+    }
+    @else if $number == 7 {
+      
+    }
+    @else if $number == 8 {
+      
+    }
+    @else if $number == 9 {
+      
+    }
+    @else {
+      @if $number < 3 {
+        @warn 'You must have at lease 3 colors';
+      }
+      @else {
+        @warn $number 'has a maximum of 9 colors';
+      }
+      @return ERROR;
+    }
+  }
+  
+  // RdPu
+  @else if $name == 'rdpu' or $name == 'rdpu' {
+    @if $number == 3 {
+      
+    }
+    @else if $number == 4 {
+      
+    }
+    @else if $number == 5 {
+      
+    }
+    @else if $number == 6 {
+      
+    }
+    @else if $number == 7 {
+      
+    }
+    @else if $number == 8 {
+      
+    }
+    @else if $number == 9 {
+      
+    }
+    @else {
+      @if $number < 3 {
+        @warn 'You must have at lease 3 colors';
+      }
+      @else {
+        @warn $number 'has a maximum of 9 colors';
+      }
+      @return ERROR;
+    }
+  }
+  
+  // YlGn
+  @else if $name == 'ylgn' or $name == 'ylgn' {
+    @if $number == 3 {
+      
+    }
+    @else if $number == 4 {
+      
+    }
+    @else if $number == 5 {
+      
+    }
+    @else if $number == 6 {
+      
+    }
+    @else if $number == 7 {
+      
+    }
+    @else if $number == 8 {
+      
+    }
+    @else if $number == 9 {
+      
+    }
+    @else {
+      @if $number < 3 {
+        @warn 'You must have at lease 3 colors';
+      }
+      @else {
+        @warn $number 'has a maximum of 9 colors';
+      }
+      @return ERROR;
+    }
+  }
+  
+  // YlGnBu
+  @else if $name == 'ylgnbu' or $name == 'YlGnBu' {
+    @if $number == 3 {
+      
+    }
+    @else if $number == 4 {
+      
+    }
+    @else if $number == 5 {
+      
+    }
+    @else if $number == 6 {
+      
+    }
+    @else if $number == 7 {
+      
+    }
+    @else if $number == 8 {
+      
+    }
+    @else if $number == 9 {
+      
+    }
+    @else {
+      @if $number < 3 {
+        @warn 'You must have at lease 3 colors';
+      }
+      @else {
+        @warn $number 'has a maximum of 9 colors';
+      }
+      @return ERROR;
+    }
+  }
+  
+  // YlOrBr
+  @else if $name == 'ylorbr' or $name == 'YlOrBr' {
+    @if $number == 3 {
+      
+    }
+    @else if $number == 4 {
+      
+    }
+    @else if $number == 5 {
+      
+    }
+    @else if $number == 6 {
+      
+    }
+    @else if $number == 7 {
+      
+    }
+    @else if $number == 8 {
+      
+    }
+    @else if $number == 9 {
+      
+    }
+    @else {
+      @if $number < 3 {
+        @warn 'You must have at lease 3 colors';
+      }
+      @else {
+        @warn $number 'has a maximum of 9 colors';
+      }
+      @return ERROR;
+    }
+  }
+  
+  // YlOrRd
+  @else if $name == 'ylorrd' or $name == 'YlOrRd' {
+    @if $number == 3 {
+      
+    }
+    @else if $number == 4 {
+      
+    }
+    @else if $number == 5 {
+      
+    }
+    @else if $number == 6 {
+      
+    }
+    @else if $number == 7 {
+      
+    }
+    @else if $number == 8 {
+      
+    }
+    @else if $number == 9 {
+      
+    }
+    @else {
+      @if $number < 3 {
+        @warn 'You must have at lease 3 colors';
+      }
+      @else {
+        @warn $number 'has a maximum of 9 colors';
+      }
+      @return ERROR;
+    }
+  }
+  
+  //////////////////////////////
+  // Diverging
+  //////////////////////////////
+  // PiYG
+  @else if $name == 'piyg' or $name == 'PiYG' or $name == 'PIYG' or $name == 'PiYg'{
+    @if $number == 3 {
+      
+    }
+    @else if $number == 4 {
+      
+    }
+    @else if $number == 5 {
+      
+    }
+    @else if $number == 6 {
+      
+    }
+    @else if $number == 7 {
+      
+    }
+    @else if $number == 8 {
+      
+    }
+    @else if $number == 9 {
+      
+    }
+    @else if $number == 10 {
+      
+    }
+    @else if $number == 11 {
+      
+    }
+    @else {
+      @if $number < 3 {
+        @warn 'You must have at lease 3 colors';
+      }
+      @else {
+        @warn $number 'has a maximum of 11 colors';
+      }
+      @return ERROR;
+    }
+  }
+  
+  // PRGn
+  @else if $name == 'prgn' or $name == 'PRGn' or $name == 'PRGN' or $name == 'PrGn'{
+    @if $number == 3 {
+      
+    }
+    @else if $number == 4 {
+      
+    }
+    @else if $number == 5 {
+      
+    }
+    @else if $number == 6 {
+      
+    }
+    @else if $number == 7 {
+      
+    }
+    @else if $number == 8 {
+      
+    }
+    @else if $number == 9 {
+      
+    }
+    @else if $number == 10 {
+      
+    }
+    @else if $number == 11 {
+      
+    }
+    @else {
+      @if $number < 3 {
+        @warn 'You must have at lease 3 colors';
+      }
+      @else {
+        @warn $number 'has a maximum of 11 colors';
+      }
+      @return ERROR;
+    }
+  }
+  
+  // PuOr
+  @else if $name == 'puor' or $name == 'PuOr' {
+    @if $number == 3 {
+      
+    }
+    @else if $number == 4 {
+      
+    }
+    @else if $number == 5 {
+      
+    }
+    @else if $number == 6 {
+      
+    }
+    @else if $number == 7 {
+      
+    }
+    @else if $number == 8 {
+      
+    }
+    @else if $number == 9 {
+      
+    }
+    @else if $number == 10 {
+      
+    }
+    @else if $number == 11 {
+      
+    }
+    @else {
+      @if $number < 3 {
+        @warn 'You must have at lease 3 colors';
+      }
+      @else {
+        @warn $number 'has a maximum of 11 colors';
+      }
+      @return ERROR;
+    }
+  }
+  
+  // RdBu
+  @else if $name == 'rdbu' or $name == 'RdBu' {
+    @if $number == 3 {
+      
+    }
+    @else if $number == 4 {
+      
+    }
+    @else if $number == 5 {
+      
+    }
+    @else if $number == 6 {
+      
+    }
+    @else if $number == 7 {
+      
+    }
+    @else if $number == 8 {
+      
+    }
+    @else if $number == 9 {
+      
+    }
+    @else if $number == 10 {
+      
+    }
+    @else if $number == 11 {
+      
+    }
+    @else {
+      @if $number < 3 {
+        @warn 'You must have at lease 3 colors';
+      }
+      @else {
+        @warn $number 'has a maximum of 11 colors';
+      }
+      @return ERROR;
+    }
+  }
+  
+  // RdGy
+  @else if $name == 'rdgy' or $name == 'RdGy' {
+    @if $number == 3 {
+      
+    }
+    @else if $number == 4 {
+      
+    }
+    @else if $number == 5 {
+      
+    }
+    @else if $number == 6 {
+      
+    }
+    @else if $number == 7 {
+      
+    }
+    @else if $number == 8 {
+      
+    }
+    @else if $number == 9 {
+      
+    }
+    @else if $number == 10 {
+      
+    }
+    @else if $number == 11 {
+      
+    }
+    @else {
+      @if $number < 3 {
+        @warn 'You must have at lease 3 colors';
+      }
+      @else {
+        @warn $number 'has a maximum of 11 colors';
+      }
+      @return ERROR;
+    }
+  }
+  
+  // RdYlBu
+  @else if $name == 'rdylbu' or $name == 'RdYlBu' {
+    @if $number == 3 {
+      
+    }
+    @else if $number == 4 {
+      
+    }
+    @else if $number == 5 {
+      
+    }
+    @else if $number == 6 {
+      
+    }
+    @else if $number == 7 {
+      
+    }
+    @else if $number == 8 {
+      
+    }
+    @else if $number == 9 {
+      
+    }
+    @else if $number == 10 {
+      
+    }
+    @else if $number == 11 {
+      
+    }
+    @else {
+      @if $number < 3 {
+        @warn 'You must have at lease 3 colors';
+      }
+      @else {
+        @warn $number 'has a maximum of 11 colors';
+      }
+      @return ERROR;
+    }
+  }
+  
+  // RdYlGn
+  @else if $name == 'rdylgn' or $name == 'RdYlGn' {
+    @if $number == 3 {
+      
+    }
+    @else if $number == 4 {
+      
+    }
+    @else if $number == 5 {
+      
+    }
+    @else if $number == 6 {
+      
+    }
+    @else if $number == 7 {
+      
+    }
+    @else if $number == 8 {
+      
+    }
+    @else if $number == 9 {
+      
+    }
+    @else if $number == 10 {
+      
+    }
+    @else if $number == 11 {
+      
+    }
+    @else {
+      @if $number < 3 {
+        @warn 'You must have at lease 3 colors';
+      }
+      @else {
+        @warn $number 'has a maximum of 11 colors';
+      }
+      @return ERROR;
+    }
+  }
+  
+  // Spectral
+  @else if $name == 'spectral' or $name == 'Spectral' {
+    @if $number == 3 {
+      
+    }
+    @else if $number == 4 {
+      
+    }
+    @else if $number == 5 {
+      
+    }
+    @else if $number == 6 {
+      
+    }
+    @else if $number == 7 {
+      
+    }
+    @else if $number == 8 {
+      
+    }
+    @else if $number == 9 {
+      
+    }
+    @else if $number == 10 {
+      
+    }
+    @else if $number == 11 {
+      
+    }
+    @else {
+      @if $number < 3 {
+        @warn 'You must have at lease 3 colors';
+      }
+      @else {
+        @warn $number 'has a maximum of 11 colors';
+      }
+      @return ERROR;
+    }
+  }
+  
+  @return $color;
+}
+
+//////////////////////////////
+// Testing
+//////////////////////////////
+#body {
+  $color: cbrew('accent', 5);
+  color: nth($color, 4);
+}
